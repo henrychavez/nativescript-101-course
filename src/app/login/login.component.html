@@ -1,0 +1,61 @@
+<ScrollView>
+    <StackLayout>
+      <GridLayout rows="*,*,3*,*,*" columns="*">
+        <Label class="titulo" text="Lines"></Label>
+
+        <Label row="1" class="bienvenida" textWrap="true">
+          <FormattedString>
+            <Span text="Welcome back, \n"></Span>
+            <Span
+              text="sign in to continue to Lines"
+              class="subcadena"
+              color="lightgrey"
+            ></Span>
+          </FormattedString>
+        </Label>
+
+        <PreviousNextView row="2">
+          <StackLayout [formGroup]="form" verticalAlignment="bottom">
+            <GridLayout rows="auto" columns="*">
+              <TextField
+                class="input"
+                formControlName="email"
+                hint="correo@example.com"
+                keyboardType="email"
+              ></TextField>
+              <Label
+                text="done"
+                horizontalAlignment="right"
+                marginRight="24"
+                class="mat"
+              ></Label>
+            </GridLayout>
+
+            <TextField
+              class="input"
+              formControlName="password"
+
+              secure="true"
+              hint="password"
+            ></TextField>
+          </StackLayout>
+        </PreviousNextView>
+
+        <Button
+          row="3"
+          class="submit-btn"
+          horizontalAlignment="left"
+          [isEnabled]="form.valid"
+          text="Login"
+          (tap)="login()"
+        ></Button>
+
+        <Label row="4" class="mensaje-registro">
+          <FormattedString>
+            <Span color="lightgrey">Don't have an account? </Span>
+            <Span color="gray">Sign up</Span>
+          </FormattedString>
+        </Label>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>

@@ -1,6 +1,56 @@
 @import '@nativescript/theme/css/core.css';
 @import '@nativescript/theme/css/default.css';
 
+/* $raleway-regular: "Raleway", "Raleway-Medium";
+$raleway-medium: "Raleway Medium", "Raleway-SemiBold";
+$raleway-bold: "Raleway", "Raleway-Bold"; */
+
+.ns-root {
+  --primary-color: rgb(102, 169, 225);
+  --default-font: "Raleway Medium", "Raleway-SemiBold";
+  --icon-font: "Material Icons", "MaterialIcons-Regular";
+}
+
+.mat {
+  font-family: var(--icon-font);
+  font-size: 24;
+}
+
+StackLayout * {
+  font-family: var(--default-font);
+}
+
 Button.-primary {
   font-size: 18;
+}
+
+.titulo {
+  font-size: 32;
+  padding: 24;
+}
+.bienvenida {
+  font-size: 36;
+  padding: 24;
+}
+
+.input {
+  border-bottom-color: transparent;
+  border-bottom-width: 2;
+  height: 56;
+  padding: 0 32 0 0;
+  margin: 0 24;
+}
+
+.input:focus {
+  border-bottom-color: var(--primary-color);
+}
+
+.submit-btn {
+  font-size: 32;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+.mensaje-registro {
+  padding: 24;
 }

@@ -10,7 +10,9 @@ import { ItemService } from './item.service'
 export class ItemsComponent implements OnInit {
   items: Array<Item>
 
-  constructor(private itemService: ItemService) {}
+  constructor(private itemService: ItemService) {
+
+  }
 
   ngOnInit(): void {
     this.items = this.itemService.getItems()
