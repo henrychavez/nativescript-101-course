@@ -6,8 +6,9 @@ $raleway-medium: "Raleway Medium", "Raleway-SemiBold";
 $raleway-bold: "Raleway", "Raleway-Bold"; */
 
 .ns-root {
-  --primary-color: rgb(102, 169, 225);
+  --primary-color: #2825D6;
   --default-font: "Raleway Medium", "Raleway-SemiBold";
+  --font-bold: "Raleway", "Raleway-Bold";
   --icon-font: "Material Icons", "MaterialIcons-Regular";
 }
 
@@ -53,4 +54,13 @@ Button.-primary {
 
 .mensaje-registro {
   padding: 24;
+}
+
+.boton {
+  font-family: var(--font-bold);
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  padding: 8 48;
+  color: white;
 }

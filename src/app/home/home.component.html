@@ -1,0 +1,28 @@
+<GridLayout class="body" rows="auto, auto,*, auto" columns="*">
+  <Label class="titulo" text="Hello&#xA;Jhonny" textWrap="true"></Label>
+  <Label row="1" class="task-counter" textWrap="true">
+    <FormattedString>
+      <Span>You have</Span>
+      <Span class="__counter">3 tasks</Span>
+      <Span>Today</Span>
+    </FormattedString>
+  </Label>
+
+  <StackLayout row="2" class="card" horizontalAlignment="center">
+    <StackLayout horizontalAlignment="center" orientation="horizontal">
+      <Label class="mat" text="description"></Label>
+      <Label class="__titulo" text="Todo" textWrap="true"></Label>
+    </StackLayout>
+
+    <ns-radio-button (onTap)="completeTask($event)">
+      <Label radioButtonText text="Soy una tarea" textWrap="true"></Label>
+    </ns-radio-button>
+  </StackLayout>
+  <Button
+    class="boton"
+    horizontalAlignment="center"
+    row="3"
+    text="Add new task"
+    (tap)="agregarTodo()"
+  ></Button>
+</GridLayout>

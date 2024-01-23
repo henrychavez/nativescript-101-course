@@ -6,12 +6,14 @@ import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { LoginComponent } from "./login/login.component";
 import { AuthGuard } from "./guards/auth.guard";
+import { HomeComponent } from "./home/home.component";
+import { AddTodoComponent } from "./add-todo/add-todo.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "/items", pathMatch: "full" },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "login", component: LoginComponent },
-  { path: "items", component: ItemsComponent, canActivate: [AuthGuard] },
-  { path: "item/:id", component: ItemDetailComponent },
+  { path: "home", component: HomeComponent, canActivate: [AuthGuard] },
+  { path: "add-todo", component: AddTodoComponent },
 ];
 
 @NgModule({

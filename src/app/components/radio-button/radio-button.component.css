@@ -1,0 +1,44 @@
+/* $size: 24;
+$checked-color: #2B34E9;
+$unchecked-color: white; */
+
+@keyframes checked {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.ns-radio-button {
+  width: 24;
+  height: 24;
+  border-radius: 50%;
+  border-width: 1;
+  border-color: var(--primary-color);
+}
+
+.ns-radio-button--withText {
+  margin-right: 16;
+}
+
+.ns-radio-button--checked {
+  border-color: white;
+}
+
+.ns-radio-button__icon {
+  font-size: 18;
+  color: var(--primary-color);
+  transform: scale(0);
+}
+
+.ns-radio-button__icon--active {
+  animation-name: checked;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}

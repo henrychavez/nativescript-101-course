@@ -1,0 +1,17 @@
+<StackLayout orientation="horizontal" (tap)="toggleButton()">
+  <StackLayout
+    class="ns-radio-button"
+    [class.ns-radio-button--checked]="checked"
+    [class.ns-radio-button--withText]="radioButtonText.length !== 0"
+    verticalAlignment="center"
+    horizontalAlignment="center"
+  >
+    <Label
+      text="done"
+      class="mat ns-radio-button__icon"
+      [class.ns-radio-button__icon--active]="checked"
+      horizontalAlignment="center"
+    ></Label>
+  </StackLayout>
+  <ng-content></ng-content>
+</StackLayout>

@@ -13,6 +13,12 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 import { PreviousNextView } from "@nativescript/iqkeyboardmanager";
 import { ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./login/login.component";
+import { HomeComponent } from "./home/home.component";
+import {
+  RadioButtonComponent,
+  RadioButtonTextDirective,
+} from "./components/radio-button/radio-button.component";
+import { AddTodoComponent } from "./add-todo/add-todo.component";
 
 registerElement("PreviousNextView", () => PreviousNextView);
 
@@ -24,12 +30,17 @@ registerElement("PreviousNextView", () => PreviousNextView);
     NativeScriptHttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    RadioButtonComponent,
+    RadioButtonTextDirective,
+    AddTodoComponent,
   ],
   declarations: [
     AppComponent,
     LoginComponent,
-    ItemsComponent,
-    ItemDetailComponent,
+    HomeComponent,
+
+    // ItemsComponent,
+    // ItemDetailComponent,
   ],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
